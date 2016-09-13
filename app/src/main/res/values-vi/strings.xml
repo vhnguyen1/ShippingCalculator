@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Tính Vận Chuyển</string>
+    <string name="base_cost_text">Chi Phí Cơ Sở:</string>
+    <string name="added_cost_text">Thêm Vào Chi Phí:</string>
+    <string name="default_base_cost_text" translatable="false"></string>
+    <string name="ounces_text">(trong ounces)</string>
+    <string name="total_cost_text">Tổng Chi Phí Vận Chuyển:</string>
+    <string name="weight_display_text">Trọng Lượng của Gói</string>
+</resources>

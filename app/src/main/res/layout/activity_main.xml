@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.orangecoastcollege.cs273.vnguyen629.shippingcalculator.MainActivity"
+    android:background="@drawable/shipping_background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/weight_display_text"
+        android:id="@+id/weightMessageTextView"
+        android:textColor="#000000"
+        android:padding="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/weightEditText"
+        android:layout_below="@+id/weightMessageTextView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:hint="@string/default_weight"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:selectAllOnFocus="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/ouncesTextView"
+        android:layout_below="@+id/weightEditText"
+        android:layout_centerHorizontal="true"
+        android:text="@string/ounces_text"
+        android:padding="10dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/base_cost_text"
+        android:id="@+id/baseCostTextView"
+        android:padding="12dp"
+        android:layout_below="@+id/ouncesTextView"
+        android:layout_toLeftOf="@+id/ouncesTextView"
+        android:layout_toStartOf="@+id/ouncesTextView"
+        android:layout_marginTop="45dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/default_base_cost_text"
+        android:id="@+id/baseCastAmountTextView"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:layout_alignTop="@+id/baseCostTextView"
+        android:layout_alignRight="@+id/weightMessageTextView"
+        android:layout_alignEnd="@+id/weightMessageTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/added_cost_text"
+        android:id="@+id/addedCostTextView"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/baseCostTextView"
+        android:layout_alignStart="@+id/baseCostTextView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/default_cost_text"
+        android:id="@+id/addedCostAmountTextView"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/baseCastAmountTextView"
+        android:layout_alignStart="@+id/baseCastAmountTextView"
+        android:textColor="#000000"
+        android:padding="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/total_cost_text"
+        android:id="@+id/totalCostTextView"
+        android:layout_below="@+id/addedCostTextView"
+        android:layout_alignLeft="@+id/addedCostTextView"
+        android:layout_alignStart="@+id/addedCostTextView"
+        android:padding="12dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/default_cost_text"
+        android:id="@+id/totalCostAmountTextView"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:layout_below="@+id/addedCostAmountTextView"
+        android:layout_alignRight="@+id/weightMessageTextView"
+        android:layout_alignEnd="@+id/weightMessageTextView" />
+
+</RelativeLayout>
