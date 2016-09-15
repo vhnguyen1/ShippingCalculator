@@ -7,6 +7,8 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.text.NumberFormat;
+
 /**
  * Controller for Shipping Calculator
  * @author Vincent Nguyen
@@ -16,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView addedCostAmount;
     private TextView totalCostAmount;
     private EditText weightAmount;
+    private static NumberFormat currency = NumberFormat.getCurrencyInstance();
 
     ShipItem newItem = new ShipItem();
 
@@ -34,25 +37,29 @@ public class MainActivity extends AppCompatActivity {
     private TextWatcher amountTextChangedListener = new TextWatcher() {
         @Override
         public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
+            // Nothing
         }
         @Override
         public void onTextChanged(CharSequence s, int start, int before, int count) {
             try {
-                int weight = Integer.parseInt(s.toString());
-                newItem.setWeight(weight);
+                if (s.length() > 0) {
+                    int weight = Integer.parseInt(s.toString());
+                    newItem.setWeight(weight);
+                }
+                else {
+                    newItem.setWeight(0);
+                }
 
-                addedCostAmount.setText(newItem.getAddedCost().toString());
-                totalCostAmount.setText(newItem.getTotalCost().toString());
+                addedCostAmount.setText(currency.format(newItem.getAddedCost()));
+                totalCostAmount.setText(currency.format(newItem.getTotalCost()));
             }
             catch (NumberFormatException err) {
-                //weightAmount.setText("");
                 weightAmount.setText("0");
             }
         }
         @Override
         public void afterTextChanged(Editable s) {
-
+            // Nothing
         }
     };
 }

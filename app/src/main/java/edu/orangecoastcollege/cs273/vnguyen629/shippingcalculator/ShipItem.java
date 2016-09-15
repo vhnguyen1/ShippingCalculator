@@ -10,16 +10,14 @@ public class ShipItem {
     private double mBaseCost;
     private double mAddedCost;
     private double mTotalCost;
-    private static final int mBaseWeight = 16;
+    //private static final int BASE_WEIGHT = 16;
 
     public ShipItem()
     {
         this.mWeight = 0;
         this.mBaseCost = 3.00;
         this.mAddedCost = 0.00;
-        this.mTotalCost = 3.00;
-        //this.mTotalCost = 0.00;
-        //this.mTotalCost += this.mBaseCost;
+        this.mTotalCost = 0.00;
     }
 
     public double getWeight() {
@@ -40,10 +38,10 @@ public class ShipItem {
 
     public void setWeight(int newWeight) {
         this.mWeight = newWeight;
-        //this.mTotalCost += this.mBaseCost;
+        this.mTotalCost = this.mBaseCost;
 
         if (this.mWeight > 16) {
-            //this.mAddedCost = ((this.mWeight - mBaseWeight) / 4.00) * 0.50;
+            //this.mAddedCost = ((this.mWeight - BASE_WEIGHT) / 4.00) * 0.50;
             this.mAddedCost = ((this.mWeight - 16) / 4.00) * 0.50;
 
             if (this.mWeight % 4 != 0)
